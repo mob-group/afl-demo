@@ -143,3 +143,8 @@ tags
 [._]*.un~
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,vim,linux,macos
+
+sum_n
+sum_n_outputs/
+versions
+versions_outputs/

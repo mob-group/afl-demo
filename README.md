@@ -55,12 +55,12 @@ $AFL_ROOT/install/usr/local/bin/afl-gcc \
 $AFL_ROOT/install/usr/local/bin/afl-fuzz \
   -i inputs \
   -o sum_n_outputs \
-  sum_n
+  ./sum_n
 
 $AFL_ROOT/install/usr/local/bin/afl-fuzz \
   -i inputs \
   -o versions_outputs \
-  versions
+  ./versions
 ```
 
 ## Interpreting Results
