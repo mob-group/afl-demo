@@ -1,5 +1,8 @@
 # AFL-Fuzz Demo
 
+This is a very brief demo; the AFL-Fuzz [docs][docs] are really good and well
+worth a read.
+
 ## Setup
 
 For simplicity these instructions all run in a known root directory
@@ -60,4 +63,17 @@ $AFL_ROOT/install/usr/local/bin/afl-fuzz \
   versions
 ```
 
+## Interpreting Results
+
+Once you've killed the fuzzer with `ctrl-C`, you can look at the results in each
+of the output directories. For each, AFL generates a `crashes/` and `queue/`
+directory with input files that you can use directly as input to the previously
+compiled programs. The ones in `queue/` are valid inputs that don't produce a
+crash.
+
+You'll find that AFL is able to identify quite quickly that large positive and
+any negative inputs cause `sum_n` to integer overflow, and that it cannot find
+an input that distinguishes `sum_n` and `sum_n_v2` at all (as you'd expect!).
+
+[docs]: https://github.com/google/AFL/blob/master/README.md
 [guide]: https://github.com/google/AFL/blob/master/docs/QuickStartGuide.txt
