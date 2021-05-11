@@ -18,6 +18,7 @@ Fortunately AFL is very easy to build and install:
 
 ```shell
 cd $AFL_ROOT
+git clone git@github.com:google/AFL.git
 cd AFL
 make -j`nproc`
 DESTDIR=$AFL_ROOT/install make install
